@@ -2,7 +2,7 @@
 
 This document outlines the steps to set up the jPetStore application environment using Apache Tomcat, MySQL, MySQL Connector/J, and the jPetStore WAR file.  This setup is a prerequisite for running JMeter performance tests (covered below as a separate document.).
 
-## 🪶 JMEter 
+## 🪶 JMEter Demonstration
 
 This JMX file, `jpetstore.jmx`, contains a performance test suite designed to stress test the jPetStore web application running locally on `http://localhost:8080/jpetstore-6.1.0`.  This test plan simulates a variety of user interactions to evaluate the application's performance under load.
 
