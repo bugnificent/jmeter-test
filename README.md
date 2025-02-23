@@ -68,7 +68,7 @@ This document outlines the steps to set up the jPetStore application environment
 
 6. **Running Tomcat:**
     * Open a new command prompt (cmd.exe).
-    * Navigate to the Tomcat bin directory: `cd %CATALINA_HOME%\bin`
+    * Navigate to the Tomcat bin directory: `cd C:\apache-tomcat-9.0.100\bin`
     * Start Tomcat: `startup.bat`
 
 7. **Accessing Tomcat Manager:**
@@ -76,7 +76,7 @@ This document outlines the steps to set up the jPetStore application environment
     * You'll be prompted for a username and password.  These are **not** your database credentials. You need to configure them in the `tomcat-users.xml` file.
 
 8. **Configuring Tomcat Manager Users:**
-    * Open the `$CATALINA_HOME/conf/tomcat-users.xml` file in a text editor.
+    * Open the `C:\apache-tomcat-9.0.100\conf\tomcat-users.xml` file in a text editor.
     * Add a user within the `<tomcat-users>` tags, like this (replace with your desired username and password):
 
     ```xml
