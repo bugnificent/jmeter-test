@@ -24,7 +24,7 @@ The JMeter test plan utilizes a range of elements, including:
 * **Timers (e.g., Constant Timer, Gaussian Timer):** To introduce realistic delays between requests, simulating user behavior.
 
 ### 🚀 Running JMX (for JMeter Monitoring)
----
+--
 
 This section describes how to monitor JMeter itself using JMX (Java Management Extensions).  This allows you to gather performance metrics and other information about JMeter's operation.
 
