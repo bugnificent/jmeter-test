@@ -26,8 +26,8 @@ The JMeter test plan utilizes a range of elements, including:
 ### 🚀 Running JMX (for JMeter Monitoring)
 ---
 
-This section describes how to monitor JMeter itself using JMX (Java Management Extensions).  This allows you to gather performance metrics and other information about JMeter's operation.
-Refer to the JMeter documentation for more details. Or you can just simply run from your JMeter app.
+This section describes how to monitor *JMeter* itself using **JMX** (Java Management Extensions).  This allows you to gather performance metrics and other information about JMeter's operation.
+Refer to the *JMeter* documentation for more details. Or you can just simply run from your *JMeter* app.
 
 **Prerequisites:**
 
