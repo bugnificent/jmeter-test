@@ -1,6 +1,30 @@
 # jPetStore Performance Test Setup
 
-This document outlines the steps to set up the jPetStore application environment using Apache Tomcat, MySQL, MySQL Connector/J, and the jPetStore WAR file.  This setup is a prerequisite for running JMeter performance tests (covered in a separate document).
+This document outlines the steps to set up the jPetStore application environment using Apache Tomcat, MySQL, MySQL Connector/J, and the jPetStore WAR file.  This setup is a prerequisite for running JMeter performance tests (covered below as a separate document.).
+
+## 🪶 JMEter 
+
+This JMX file, `jpetstore.jmx`, contains a performance test suite designed to stress test the jPetStore web application running locally on `http://localhost:8080/jpetstore-6.1.0`.  This test plan simulates a variety of user interactions to evaluate the application's performance under load.
+
+The test covers all key user scenarios, including:
+
+* User Login
+* Product Search
+* Adding Items to Cart
+* Checkout Process
+
+The test employs a Thread Group configured to simulate a substantial number of concurrent users to generate a realistic load.  The ramp-up period allows the load to gradually increase, preventing an abrupt spike.  The test also includes multiple iterations (loops) to capture performance data over a sustained period. *(Note: You will need to adjust the number of threads, ramp-up time, and loop count within the JMX file itself to meet your specific testing requirements.)*
+
+The JMeter test plan utilizes a range of elements, including:
+
+* **HTTP Request Samplers:** To simulate the various HTTP requests associated with each user scenario.
+* **Thread Group:** To manage the concurrent users and control the test execution.
+* **Listeners (e.g., Aggregate Report, View Results Tree):** To collect and visualize the performance metrics.
+* **Assertions (e.g., Response Assertions):** To validate the correctness of the application's responses.
+* **Timers (e.g., Constant Timer, Gaussian Timer):** To introduce realistic delays between requests, simulating user behavior.
+
+This test plan is intended to gather performance data related to response times, throughput, and error rates under stress, enabling identification of potential bottlenecks or areas for optimization within the jPetStore application.
+
 
 ## ⚠️ Warning: Before dive into the Database Management
 - Since i used MySQL just today after decades, some instructions may be unclear about SQL management. I was able to connect DB but i was not able to update my database from web app changes. Since this test doesnt rely on the database, you can easily skip database parts.
@@ -96,29 +120,6 @@ i will mark unnecessary lines with ℹ️
 - Go to the `http:localhost:8080/jpetstore-6.1.0` to see the actual site.
 
 Now you should be able to access the Tomcat Manager and the jPetStore application should be running and connected to your MySQL database.  You are ready to run your JMeter performance tests.
-
-## ✅ Upcoming .jmx description
-
-This JMX file, `jpetstore.jmx`, contains a performance test suite designed to stress test the jPetStore web application running locally on `http://localhost:8080/jpetstore-6.1.0`.  This test plan simulates a variety of user interactions to evaluate the application's performance under load.
-
-The test covers all key user scenarios, including:
-
-* User Login
-* Product Search
-* Adding Items to Cart
-* Checkout Process
-
-The test employs a Thread Group configured to simulate a substantial number of concurrent users to generate a realistic load.  The ramp-up period allows the load to gradually increase, preventing an abrupt spike.  The test also includes multiple iterations (loops) to capture performance data over a sustained period. *(Note: You will need to adjust the number of threads, ramp-up time, and loop count within the JMX file itself to meet your specific testing requirements.)*
-
-The JMeter test plan utilizes a range of elements, including:
-
-* **HTTP Request Samplers:** To simulate the various HTTP requests associated with each user scenario.
-* **Thread Group:** To manage the concurrent users and control the test execution.
-* **Listeners (e.g., Aggregate Report, View Results Tree):** To collect and visualize the performance metrics.
-* **Assertions (e.g., Response Assertions):** To validate the correctness of the application's responses.
-* **Timers (e.g., Constant Timer, Gaussian Timer):** To introduce realistic delays between requests, simulating user behavior.
-
-This test plan is intended to gather performance data related to response times, throughput, and error rates under stress, enabling identification of potential bottlenecks or areas for optimization within the jPetStore application.
 
 ## 📜 License
 This project is licensed under the [Apache License.](LICENSE) See the LICENSE file for details.
