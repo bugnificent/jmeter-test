@@ -2,6 +2,9 @@
 
 This document outlines the steps to set up the jPetStore application environment using Apache Tomcat, MySQL, MySQL Connector/J, and the jPetStore WAR file.  This setup is a prerequisite for running JMeter performance tests (covered in a separate document).
 
+⚠️ **Warning:** Before dive into the Database Management
+- Since i used MySQL just today after decades, some instructions may be unclear about SQL management. I was able to connect DB but i was not able to update my database from web app changes. Since this test doesnt rely on the database, you can easily skip database parts.
+
 ## Dependencies 📦
 
 1. **Apache Tomcat 9.0.100:**  The web server environment.
