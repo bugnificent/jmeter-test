@@ -99,7 +99,7 @@ Now you should be able to access the Tomcat Manager and the jPetStore applicatio
 
 ## ✅ Upcoming .jmx description
 
-This JMX file, `jpetstore.jmx`, contains a performance test suite designed to stress test the jPetStore web application running locally on `http://localhost:8080/jpetstore`.  This test plan simulates a variety of user interactions to evaluate the application's performance under load.
+This JMX file, `jpetstore.jmx`, contains a performance test suite designed to stress test the jPetStore web application running locally on `http://localhost:8080/jpetstore-6.1.0`.  This test plan simulates a variety of user interactions to evaluate the application's performance under load.
 
 The test covers all key user scenarios, including:
 
