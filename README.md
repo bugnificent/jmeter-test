@@ -29,7 +29,8 @@ This test plan is intended to gather performance data related to response times,
 ## ⚠️ Warning: Before dive into the Database Management
 - Since i used MySQL just today after decades, some instructions may be unclear about SQL management. I was able to connect DB but i was not able to update my database from web app changes. Since this test doesnt rely on the database, you can easily skip database parts.
 i will mark unnecessary lines with ℹ️ 
-## Dependencies 📦
+
+### Dependencies 📦
 
 1. **Apache Tomcat 9.0.100:**  The web server environment.
     * Download: [https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100-windows-x64.zip](https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100-windows-x64.zip) 
@@ -46,7 +47,7 @@ i will mark unnecessary lines with ℹ️
 4. **jPetStore WAR File:** The packaged jPetStore application.
     * Place the `jpetstore.war` file in the `$CATALINA_HOME/webapps` directory.  This will create a `jpetstore-6.1.0` (or similar) directory under `webapps` when Tomcat starts.
 
-## Tomcat Setup on Windows 🪟
+### Tomcat Setup on Windows 🪟
 
 1. ℹ️ **MySQL Database Setup:**
     * Start your MySQL server.
@@ -116,7 +117,7 @@ i will mark unnecessary lines with ℹ️
     * Save the `tomcat-users.xml` file.
     * **Restart Tomcat:** Stop Tomcat (`shutdown.bat` in the Tomcat bin directory) and start it again (`startup.bat`) for the changes to take effect.
 
-## 🏃‍♂️Running App 
+### 🏃‍♂️Running App 
 - Go to the `http:localhost:8080/jpetstore-6.1.0` to see the actual site.
 
 Now you should be able to access the Tomcat Manager and the jPetStore application should be running and connected to your MySQL database.  You are ready to run your JMeter performance tests.
