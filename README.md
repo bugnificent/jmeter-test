@@ -26,7 +26,7 @@ The JMeter test plan utilizes a range of elements, including:
 This test plan is intended to gather performance data related to response times, throughput, and error rates under stress, enabling identification of potential bottlenecks or areas for optimization within the jPetStore application.
 
 
-## ⚠️ Warning: Before dive into the Database Management
+## ⚠️ Warning: Before diving into the Database Management
 - Since i used MySQL just today after decades, some instructions may be unclear about SQL management. I was able to connect DB but i was not able to update my database from web app changes. Since this test doesnt rely on the database, you can easily skip database parts.
 i will mark unnecessary lines with ℹ️ 
 
