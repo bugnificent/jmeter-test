@@ -4,18 +4,18 @@ This document outlines the steps to set up the jPetStore application environment
 
 ⚠️ **Warning:** Before dive into the Database Management
 - Since i used MySQL just today after decades, some instructions may be unclear about SQL management. I was able to connect DB but i was not able to update my database from web app changes. Since this test doesnt rely on the database, you can easily skip database parts.
-
+i will mark unnecessary lines. with ℹ️ 
 ## Dependencies 📦
 
 1. **Apache Tomcat 9.0.100:**  The web server environment.
     * Download: [https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100-windows-x64.zip](https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100-windows-x64.zip) 
     * Extract the zip file to your desired location (e.g., `C:\apache-tomcat-9.0.100`).  We'll refer to this as `$CATALINA_HOME` from now on.
 
-2. **MySQL Community Edition:** The database server.
+2. ℹ️ **MySQL Community Edition:** The database server.
     * Download: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/) (Download and install the appropriate version for your operating system.)
     * After installation, create a database named `jpetstore`. You can use MySQL Workbench or the command line for this.
 
-3. **MySQL Connector/J 8.2.0:** The JDBC driver for connecting to the MySQL database.
+3. ℹ️ **MySQL Connector/J 8.2.0:** The JDBC driver for connecting to the MySQL database.
     * Download: [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/) (Choose the platform-independent "Platform Independent" version as a `.zip` or `.tar.gz` and extract it)
     * Copy the `mysql-connector-j-8.2.0.jar` (or similar file name depending on the downloaded version) from the extracted folder to `$CATALINA_HOME/lib`.
 
@@ -24,7 +24,7 @@ This document outlines the steps to set up the jPetStore application environment
 
 ## Tomcat Setup on Windows 🪟
 
-1. **MySQL Database Setup:**
+1. ℹ️ **MySQL Database Setup:**
     * Start your MySQL server.
     * Import the database schema:
         * Open a MySQL client (e.g., MySQL Workbench or the command line).
@@ -54,7 +54,7 @@ This document outlines the steps to set up the jPetStore application environment
         * `%CATALINA_HOME%\bin`
     * Click "OK" on all dialog boxes.
 
-5. **Configure Database Connection in `applicationContext.xml`:**
+5. ℹ️ **Configure Database Connection in `applicationContext.xml`:**
     * Edit the `applicationContext.xml` file located at `C:\apache-tomcat-9.0.100\webapps\jpetstore-6.1.0\WEB-INF\applicationContext.xml`.
     * Add the following bean definition within the `<beans>` tags, replacing `your_db_username` and `your_db_pass` with your actual MySQL username and password:
 
