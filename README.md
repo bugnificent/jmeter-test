@@ -94,6 +94,29 @@ i will mark unnecessary lines with ℹ️
 
 Now you should be able to access the Tomcat Manager and the jPetStore application should be running and connected to your MySQL database.  You are ready to run your JMeter performance tests.
 
+## ✅ Upcoming .jmx description
+
+This JMX file, `jpetstore.jmx`, contains a performance test suite designed to stress test the jPetStore web application running locally on `http://localhost:8080/jpetstore`.  This test plan simulates a variety of user interactions to evaluate the application's performance under load.
+
+The test covers all key user scenarios, including:
+
+* User Login
+* Product Search
+* Adding Items to Cart
+* Checkout Process
+
+The test employs a Thread Group configured to simulate a substantial number of concurrent users to generate a realistic load.  The ramp-up period allows the load to gradually increase, preventing an abrupt spike.  The test also includes multiple iterations (loops) to capture performance data over a sustained period. *(Note: You will need to adjust the number of threads, ramp-up time, and loop count within the JMX file itself to meet your specific testing requirements.)*
+
+The JMeter test plan utilizes a range of elements, including:
+
+* **HTTP Request Samplers:** To simulate the various HTTP requests associated with each user scenario.
+* **Thread Group:** To manage the concurrent users and control the test execution.
+* **Listeners (e.g., Aggregate Report, View Results Tree):** To collect and visualize the performance metrics.
+* **Assertions (e.g., Response Assertions):** To validate the correctness of the application's responses.
+* **Timers (e.g., Constant Timer, Gaussian Timer):** To introduce realistic delays between requests, simulating user behavior.
+
+This test plan is intended to gather performance data related to response times, throughput, and error rates under stress, enabling identification of potential bottlenecks or areas for optimization within the jPetStore application.
+
 ## 📜 License
 This project is licensed under the [Apache License.](LICENSE) See the LICENSE file for details.
 
