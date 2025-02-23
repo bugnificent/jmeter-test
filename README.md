@@ -90,3 +90,9 @@ This document outlines the steps to set up the jPetStore application environment
     * **Restart Tomcat:** Stop Tomcat (`shutdown.bat` in the Tomcat bin directory) and start it again (`startup.bat`) for the changes to take effect.
 
 Now you should be able to access the Tomcat Manager and the jPetStore application should be running and connected to your MySQL database.  You are ready to run your JMeter performance tests.
+
+## 📜 License
+This project is licensed under the [Apache License.](LICENSE) See the LICENSE file for details.
+
+## 🙌 Contributing
+Feel free to open issues or submit pull requests for improvements. Contributions are welcome!
