@@ -27,6 +27,7 @@ The JMeter test plan utilizes a range of elements, including:
 ---
 
 This section describes how to monitor JMeter itself using JMX (Java Management Extensions).  This allows you to gather performance metrics and other information about JMeter's operation.
+Refer to the JMeter documentation for more details. Or you can just simply run from your JMeter app.
 
 **Prerequisites:**
 
@@ -66,8 +67,6 @@ While the available MBeans can vary slightly between JMeter versions, some commo
 
 *   **Connection refused:** Double-check that JMeter is running and that the port you're using is correct. Check for firewalls that might be blocking the connection.
 *   **Cannot find JMeter in JVisualVM:**  Make sure you've added the JMX connection correctly in JVisualVM.
-
-___ This section provides a basic overview of monitoring JMeter using JMX.  Refer to the JMeter documentation for more details. Or you can just simply run from your JMeter app.
 
 This test plan is intended to gather performance data related to response times, throughput, and error rates under stress, enabling identification of potential bottlenecks or areas for optimization within the jPetStore application.
 
