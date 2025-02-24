@@ -32,6 +32,56 @@ When you run the `jpetstore.jmx` test plan, JMeter will automatically generate a
 ```bash
 jmeter -n -t jpetstore.jmx -l results.jtl
 ```
+## 📃 JMeter HTML Report Generation
+
+This guide explains how to generate an HTML report for your JMeter test results.
+
+## Prerequisites
+- Apache JMeter installed on your system.
+- A JMeter test results file (e.g., `jpetstore-results.jtl`).
+
+## Generating the HTML Report
+
+To generate an HTML report from your JMeter test results, use the following command:
+
+```bash
+ jmeter -g jpetstore-results.jtl -o html-report
+```
+### Explanation of the Command
+- `-g jpetstore-results.jtl`: Specifies the path to your JMeter test results file (`.jtl`).
+- `-o html-report`: Specifies the output directory where the HTML report will be generated.
+
+## Important Note
+The `html-report` directory **must not exist** before running the command. JMeter does not overwrite existing reports. If the directory already exists, you will encounter an error.
+
+To avoid this, ensure you delete the `html-report` directory before generating a new report:
+
+```bash
+ rm -rf html-report
+```
+
+After deleting the directory, you can safely run the report generation command again.
+
+## Viewing the Report
+Once the report is generated, open the `html-report/index.html` file in your web browser to view the results.
+
+## Example Workflow
+1. Run your JMeter test and save the results to `jpetstore-results.jtl`.
+2. Delete the existing `html-report` directory (if it exists):
+3. 
+   ```bash
+   rm -rf html-report
+   ```
+4. Generate the HTML report:
+   
+   ```bash
+   jmeter -g jpetstore-results.jtl -o html-report
+   ```
+6. Open `html-report/index.html` in your browser to analyze the results.
+
+---
+
+For more information, refer to the official [JMeter Documentation](https://jmeter.apache.org/).
 
 ### 🚀 Running JMX (for JMeter Monitoring)
 ---
