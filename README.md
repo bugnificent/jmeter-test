@@ -32,26 +32,26 @@ When you run the `jpetstore.jmx` test plan, JMeter will automatically generate a
 ```bash
 jmeter -n -t jpetstore.jmx -l results.jtl
 ```
-## 📃 JMeter HTML Report Generation
+## 📊 JMeter HTML Report Generation
 
 This guide explains how to generate an HTML report for your JMeter test results.
 
-## Prerequisites
+## 🛠️ Prerequisites
 - Apache JMeter installed on your system.
 - A JMeter test results file (e.g., `jpetstore-results.jtl`).
 
-## Generating the HTML Report
+## 🚀 Generating the HTML Report
 
 To generate an HTML report from your JMeter test results, use the following command:
 
 ```bash
  jmeter -g jpetstore-results.jtl -o html-report
 ```
-### Explanation of the Command
+### 📝 Explanation of the Command
 - `-g jpetstore-results.jtl`: Specifies the path to your JMeter test results file (`.jtl`).
 - `-o html-report`: Specifies the output directory where the HTML report will be generated.
 
-## Important Note
+## ⚠️ Important Note
 The `html-report` directory **must not exist** before running the command. JMeter does not overwrite existing reports. If the directory already exists, you will encounter an error.
 
 To avoid this, ensure you delete the `html-report` directory before generating a new report:
@@ -62,10 +62,10 @@ To avoid this, ensure you delete the `html-report` directory before generating a
 
 After deleting the directory, you can safely run the report generation command again.
 
-## Viewing the Report
+## 👀 Viewing the Report
 Once the report is generated, open the `html-report/index.html` file in your web browser to view the results.
 
-## Example Workflow
+## 📂 Example Workflow
 1. Run your JMeter test and save the results to `jpetstore-results.jtl`.
 2. Delete the existing `html-report` directory (if it exists):
    
@@ -82,14 +82,14 @@ Once the report is generated, open the `html-report/index.html` file in your web
 
 ---
 
-For more information, refer to the official [JMeter Documentation](https://jmeter.apache.org/).
+For more information, refer to the official [JMeter Documentation](https://jmeter.apache.org/). 📚
 
 ### 🚀 Running JMX (for JMeter Monitoring)
 ---
 
 This section describes how to monitor **JMeter** itself using *JMX* (Java Management Extensions).  This allows you to gather performance metrics and other information about JMeter's operation.  Additionally, we'll cover how to generate and interpret `.jtl` result files.
 
-Refer to the **JMeter** documentation for more details. Or you can just simply run from your **JMeter** app.
+Refer to the **JMeter** documentation for more details. 📚 Or you can just simply run from your **JMeter** app. 
 
 **Prerequisites:**
 
@@ -163,7 +163,7 @@ i will mark unnecessary lines with ℹ️
 
 1. **Apache Tomcat 9.0.100:**  The web server environment.
     * Download: [https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100-windows-x64.zip](https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100-windows-x64.zip) 
-    * Extract the zip file to your desired location (e.g., `C:\apache-tomcat-9.0.100`).  We'll refer to this as `$CATALINA_HOME` from now on.
+    * Extract the zip file to your desired location (e.g., `C:\apache-tomcat-9.0.100`).  We'll  to this as `$CATALINA_HOME` from now on.
 
 2. ℹ️ **MySQL Community Edition:** The database server.
     * Download: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/) (Download and install the appropriate version for your operating system.)
