@@ -5,19 +5,19 @@ This document outlines the steps to set up the jPetStore application environment
 # 🖼️ Quick review
 
 ### Thread Group
-<img align="center" width="900" height="442" src="https://github.com/user-attachments/assets/63f30598-ce9e-4b8e-b666-13d928f70cb0">
+<img align="center" width="900" height="450" src="https://github.com/user-attachments/assets/63f30598-ce9e-4b8e-b666-13d928f70cb0">
 
 
 ### Dashboard
-<img align="center" width="900" height="441" src="https://github.com/user-attachments/assets/9f2b5242-811a-466b-9a7d-3f6f6aa61fc6">
+<img align="center" width="900" height="450" src="https://github.com/user-attachments/assets/6c73463c-83e8-4597-a265-b7d4cb2e49e9">
 
 
 ### Aggregate Report  
-<img align="center" width="900" height="484" src="https://github.com/user-attachments/assets/2afebc44-e6b7-4fee-b367-ad54f675026e">
+<img align="center" width="900" height="450" src="https://github.com/user-attachments/assets/d487b640-b222-49db-8d0b-c5c3d3807aa3">
 
 
 ### Errors if any
-<img align="center" width="900" height="281" src="https://github.com/user-attachments/assets/4ad4b4cc-c49f-48aa-8712-86b9d26bfa1d">
+<img align="center" width="900" height="300" src="https://github.com/user-attachments/assets/976dd2cb-cf0a-4a41-9010-b20b6e80f753">
 
 ## 🪶 JMeter Demonstration
 
