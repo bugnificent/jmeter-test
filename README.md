@@ -4,7 +4,7 @@ This document outlines the steps to set up the jPetStore application environment
 
 # 🖼️ Quick review
 - Dashboard
-<img align="center" width="900" height="442" src="https://github.com/user-attachments/assets/16e4124d-121d-49cd-aec9-04a9d70c40b4">
+<img align="center" width="900" height="442" src="https://github.com/user-attachments/assets/944d4df0-d144-48d7-ab34-2dd75ad1ed6c">
 
 
 - Aggregate Report  
