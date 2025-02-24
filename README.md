@@ -25,7 +25,7 @@ The JMeter test plan utilizes a range of elements, including:
 * **Assertions (e.g., Response Assertions):** To validate the correctness of the application's responses.
 * **Timers (e.g., Constant Timer, Gaussian Timer):** To introduce realistic delays between requests, simulating user behavior.
 
-**Generating and Analyzing .jtl Results:**
+🔬 **Generating and Analyzing .jtl Results:**
 
 When you run the `jpetstore.jmx` test plan, JMeter will automatically generate a `.jtl` file containing the test results.  You can specify the output file name using the `-l` option when running JMeter from the command line:
 
