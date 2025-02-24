@@ -68,7 +68,7 @@ Once the report is generated, open the `html-report/index.html` file in your web
 ## Example Workflow
 1. Run your JMeter test and save the results to `jpetstore-results.jtl`.
 2. Delete the existing `html-report` directory (if it exists):
-3. 
+   
    ```bash
    rm -rf html-report
    ```
@@ -77,6 +77,7 @@ Once the report is generated, open the `html-report/index.html` file in your web
    ```bash
    jmeter -g jpetstore-results.jtl -o html-report
    ```
+   
 6. Open `html-report/index.html` in your browser to analyze the results.
 
 ---
