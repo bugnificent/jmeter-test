@@ -17,7 +17,7 @@ This document outlines the steps to set up the jPetStore application environment
 
 
 ### Errors if any
-<img align="center" width="900" height="281" src="https://github.com/user-attachments/assets/23d93123-bc31-4360-b979-698bc642069f">
+<img align="center" width="900" height="281" src="https://github.com/user-attachments/assets/4ad4b4cc-c49f-48aa-8712-86b9d26bfa1d">
 
 ## 🪶 JMeter Demonstration
 
