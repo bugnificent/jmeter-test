@@ -3,6 +3,7 @@
 This document outlines the steps to set up the jPetStore application environment using Apache Tomcat, MySQL, MySQL Connector/J, and the jPetStore WAR file.  This setup is a prerequisite for running JMeter performance tests (covered below as a separate document).
 
 # 🖼️ Quick review
+
 ### Dashboard
 <img align="center" width="900" height="442" src="https://github.com/user-attachments/assets/944d4df0-d144-48d7-ab34-2dd75ad1ed6c">
 
