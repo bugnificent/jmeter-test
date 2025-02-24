@@ -9,15 +9,15 @@ This document outlines the steps to set up the jPetStore application environment
 
 
 ### Dashboard
-<img align="center" width="900" height="442" src="https://github.com/user-attachments/assets/944d4df0-d144-48d7-ab34-2dd75ad1ed6c">
+<img align="center" width="900" height="442" src="https://github.com/user-attachments/assets/5d1cbb8e-87c9-4deb-a2a5-95a32d622ce2">
 
 
 ### Aggregate Report  
-<img align="center" width="900" height="480" src="https://github.com/user-attachments/assets/80da27f6-0a98-4d27-a767-b2450736c0ea">
+<img align="center" width="900" height="480" src="https://github.com/user-attachments/assets/2afebc44-e6b7-4fee-b367-ad54f675026e">
 
 
 ### Errors if any
-<img align="center" width="900" height="232" src="https://github.com/user-attachments/assets/459e9da6-c5be-4da1-b106-42fb9677789e">
+<img align="center" width="900" height="232" src="https://github.com/user-attachments/assets/f8d0a265-7f22-456d-beb5-f501b3c1738f">
 
 ## 🪶 JMeter Demonstration
 
