@@ -48,8 +48,7 @@ Refer to the **JMeter** documentation for more details. Or you can just simply r
 
 1.  **Start JMeter and Generate .jtl Results.** JMeter generally has JMX enabled by default. You can specify the JMX port when starting JMeter using the `-Jjmeter.rmi.port` property.  Simultaneously, you can specify the output `.jtl` file using the `-l` option. For example:
     `./jmeter -Jjmeter.rmi.port=1099 -l results.jtl
-    `
-    If you don't specify the port, JMeter will use a dynamic port.  It will print the port number to the console during startup, so you'll need to look for it there.
+    `If you don't specify the port, JMeter will use a dynamic port.  It will print the port number to the console during startup, so you'll need to look for it there.
 
 2.  **Launch your JMX client.** Popular options include JVisualVM, JConsole, and Mission Control.
 
