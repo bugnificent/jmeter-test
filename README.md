@@ -91,11 +91,11 @@ This section describes how to monitor **JMeter** itself using *JMX* (Java Manage
 
 Refer to the **JMeter** documentation for more details. 📚 Or you can just simply run from your **JMeter** app. 
 
-🛠️ **Prerequisites:**
+## 🛠️ Prerequisites:
 
 *   JMeter installed.
 
-📌 **Steps:**
+## 📌 Steps:
 
 1.  **Start JMeter and Generate .jtl Results.** JMeter generally has JMX enabled by default. You can specify the JMX port when starting JMeter using the `-Jjmeter.rmi.port` property.  Simultaneously, you can specify the output `.jtl` file using the `-l` option. For example: `./jmeter -Jjmeter.rmi.port=1099 -l results.jtl` If you don't specify the port, JMeter will use a dynamic port.  It will print the port number to the console during startup, so you'll need to look for it there.
 
@@ -115,7 +115,7 @@ Refer to the **JMeter** documentation for more details. 📚 Or you can just sim
       This will generate an HTML report in the `report_directory`.
     * **External Tools:**  Tools like Excel, LibreOffice Calc, or specialized performance testing analysis tools can be used to analyze the `.jtl` data.
 
-#️⃣ **Example (using JVisualVM and .jtl):**
+## #️⃣ Example (using JVisualVM and .jtl):
 
 1.  Start JMeter with `-Jjmeter.rmi.port=1099 -l results.jtl`.
 2.  Open JVisualVM.
@@ -124,14 +124,14 @@ Refer to the **JMeter** documentation for more details. 📚 Or you can just sim
 5.  You should now see JMeter in the JVisualVM "Applications" list. Double-click it to start monitoring.
 6. After the test, open `results.jtl` in JMeter or use the command line to generate a report.
 
-🔐 **Key JMeter MBeans:**
+## 🔐 Key JMeter MBeans:
 
 While the available MBeans can vary slightly between JMeter versions, some common and useful MBeans to look for include:
 
 *   `jmeter.threads`: Provides information about thread activity.
 *   `jmeter.test`: Contains general test statistics.
 
-🌀 **Interpreting .jtl Results:**
+## 🌀 Interpreting .jtl Results:
 
 The `.jtl` file contains a wealth of information about your test run.  Key data points to consider include:
 
@@ -145,7 +145,7 @@ The `.jtl` file contains a wealth of information about your test run.  Key data 
 * **Latency:** The time taken to start processing the request after it was sent.
 * **Connect Time:** The time taken to establish a connection to the server.
 
-⚙️ **Troubleshooting:**
+## ⚙️ Troubleshooting:
 
 *   **Connection refused:** Double-check that JMeter is running and that the port you're using is correct. Check for firewalls that might be blocking the connection.
 *   **Cannot find JMeter in JVisualVM:**  Make sure you've added the JMX connection correctly in JVisualVM.
