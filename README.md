@@ -12,7 +12,7 @@ This document outlines the steps to set up the jPetStore application environment
 <img align="center" width="900" height="450" src="https://github.com/user-attachments/assets/5a7f6b24-85b5-4e31-a0d5-f3c7dfd83847">
 
 
-### Statics 
+### Statistics 
 <img align="center" width="900" height="450" src="https://github.com/user-attachments/assets/97b14db7-5e1d-4e0a-9081-091ebce02ef5">
 
 
