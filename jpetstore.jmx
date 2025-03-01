@@ -11,6 +11,8 @@
           </elementProp>
         </collectionProp>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder">
@@ -46,7 +48,7 @@
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">false</boolProp>
         <stringProp name="shareMode">shareMode.all</stringProp>
-        <boolProp name="stopThread">true</boolProp>
+        <boolProp name="stopThread">false</boolProp>
         <stringProp name="variableNames">username,password,country</stringProp>
       </CSVDataSet>
       <hashTree/>
@@ -89,11 +91,11 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.implementation"></stringProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
       </ConfigTestElement>
       <hashTree/>
       <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
@@ -162,7 +164,7 @@
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -181,7 +183,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action?signonForm=" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action?signonForm=">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -208,7 +210,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action?newAccountForm=" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action?newAccountForm=">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -235,7 +237,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -488,7 +490,7 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/">
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">8080</stringProp>
             <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -520,7 +522,7 @@
             </ConstantTimer>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action">
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">8080</stringProp>
             <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -534,12 +536,12 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
               <stringProp name="ConstantTimer.delay">3554</stringProp>
             </ConstantTimer>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action?signonForm=" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action?signonForm=">
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">8080</stringProp>
             <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -566,7 +568,7 @@
             </ConstantTimer>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Account.action">
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">8080</stringProp>
             <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -580,7 +582,7 @@
                 <elementProp name="password" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">password</stringProp>
-                  <stringProp name="Argument.value">sonjitsu123</stringProp>
+                  <stringProp name="Argument.value">$[password]</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -608,7 +610,7 @@
                 <elementProp name="username" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">username</stringProp>
-                  <stringProp name="Argument.value">velespit</stringProp>
+                  <stringProp name="Argument.value">${username}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -631,13 +633,13 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <RandomOrderController guiclass="RandomOrderControllerGui" testclass="RandomOrderController" testname="Random Order Purchase Controller" enabled="true"/>
+        <RandomOrderController guiclass="RandomOrderControllerGui" testclass="RandomOrderController" testname="Random Order Purchase Controller"/>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Reptile Purchase" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Reptile Purchase">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=REPTILES" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=REPTILES">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -671,7 +673,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=RP-SN-01" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=RP-SN-01">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -705,7 +707,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewItem=&amp;itemId=EST-11" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewItem=&amp;itemId=EST-11">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -739,7 +741,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-11" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-11">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -773,7 +775,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -800,7 +802,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -927,7 +929,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -963,11 +965,11 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Dog Purchase" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Dog Purchase">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=DOGS" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=DOGS">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -983,12 +985,14 @@
                     <stringProp name="Argument.name">viewCategory</stringProp>
                     <stringProp name="Argument.value"></stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="categoryId" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">categoryId</stringProp>
                     <stringProp name="Argument.value">DOGS</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
@@ -999,7 +1003,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=K9-CW-01" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=K9-CW-01">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1033,7 +1037,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-27" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-27">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1049,12 +1053,14 @@
                     <stringProp name="Argument.name">addItemToCart</stringProp>
                     <stringProp name="Argument.value"></stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="workingItemId" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">workingItemId</stringProp>
                     <stringProp name="Argument.value">EST-27</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
@@ -1065,7 +1071,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1081,6 +1087,7 @@
                     <stringProp name="Argument.name">newOrderForm</stringProp>
                     <stringProp name="Argument.value"></stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
@@ -1091,7 +1098,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1107,84 +1114,98 @@
                     <stringProp name="Argument.name">order.billToLastName</stringProp>
                     <stringProp name="Argument.value">a</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.billZip" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.billZip</stringProp>
                     <stringProp name="Argument.value">34240</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="__fp" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">__fp</stringProp>
                     <stringProp name="Argument.value">QFFAIQIwukivSGIDG0PSlBG8fw3SX7O-0i8k2mLlhjlW-1rB9_dNktA76-T49AYKWOGjakCAr8ZMiQ-L-WhQkT-4Tk1X8ttgpszrNl9t_wmMjEV2tiVfvA==</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.cardType" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.cardType</stringProp>
                     <stringProp name="Argument.value">Visa</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.expiryDate" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.expiryDate</stringProp>
                     <stringProp name="Argument.value">12/03</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.billToFirstName" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.billToFirstName</stringProp>
                     <stringProp name="Argument.value">yusuf</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.billCity" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.billCity</stringProp>
                     <stringProp name="Argument.value">IST</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="_sourcePage" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">_sourcePage</stringProp>
                     <stringProp name="Argument.value">0rCIiMUuDSXAfiJ3cMp2GdvZUT71op72CYK14fvbr2aUokCZCJhO09G3QoEXUj6gz6R5kzjeH7BwDZFeXLvidfpOViCNkPCAQfnORhBqXv4=</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.billAddress2" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.billAddress2</stringProp>
                     <stringProp name="Argument.value">Pazarici</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="newOrder" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">newOrder</stringProp>
                     <stringProp name="Argument.value">Continue</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.billAddress1" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.billAddress1</stringProp>
                     <stringProp name="Argument.value">GOP/IST</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.creditCard" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.creditCard</stringProp>
                     <stringProp name="Argument.value">999 9999 9999 9999</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.billState" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.billState</stringProp>
                     <stringProp name="Argument.value">GOP</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="order.billCountry" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">true</boolProp>
                     <stringProp name="Argument.name">order.billCountry</stringProp>
                     <stringProp name="Argument.value">Turkey</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
@@ -1204,7 +1225,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1240,11 +1261,11 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Bird Purchase" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Bird Purchase">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=BIRDS" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=BIRDS">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1278,7 +1299,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=AV-SB-02" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=AV-SB-02">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1312,7 +1333,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-19" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-19">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1346,7 +1367,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1500,7 +1521,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1540,7 +1561,7 @@
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=FISH" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewCategory=&amp;categoryId=FISH">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1574,7 +1595,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=FI-SW-02" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Catalog.action?viewProduct=&amp;productId=FI-SW-02">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1642,7 +1663,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrderForm=">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1796,7 +1817,7 @@
               </ConstantTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:8080/jpetstore-6.1.0/actions/Order.action?newOrder=&amp;confirmed=true">
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">8080</stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -1860,13 +1881,13 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
               <stringProp name="ConstantTimer.delay">0</stringProp>
             </ConstantTimer>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Login Controller">
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Login Controller" enabled="true">
           <collectionProp name="ModuleController.node_path">
             <stringProp name="764597751">Test Plan</stringProp>
             <stringProp name="-2111039092">jpetstore</stringProp>
